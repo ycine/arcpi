@@ -8,9 +8,10 @@ it = arcpy.env.workspace = r"Database Connections\s4.asc-polska.pl.gniewkowo_kan
 
 
 ptd = arcpy.ListDatasets()
-for i in ptd:
-    ptd_unre = arcpy.UnregisterAsVersioned_management(i)
-
 ptl = arcpy.ListTables()
-for i in ptl:
-    un = arcpy.UnregisterAsVersioned_management(i)
+
+for i in ptd and ptl:
+    unre = arcpy.UnregisterAsVersioned_management(i)
+
+
+
