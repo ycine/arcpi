@@ -44,3 +44,11 @@
 #     if i.isGroup
 #     tb += 1
 
+#DODANIE WARSTWY DO AKUTALNEGO PROJEKTU
+# sc = r"D:\studia\Geoinformacja II stopień\Ćwiczenia odatkowe ArcGiS\cw 1\_shapefile\_shapefile\cieki_arc.shp"
+# we = iface.addVectorLayer(sc,'dodana','ogr')
+
+#ITERACJA PO POLACH
+lej = iface.mapLayer()
+for i in lej:
+    print(i.getFeatures())
